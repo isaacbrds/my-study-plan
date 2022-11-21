@@ -1,6 +1,8 @@
 require "bundler/setup"
 require "my_ruby_study_level_2"
 require "foodie/food"
+require "algorithms/bubble_sort"
+
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
