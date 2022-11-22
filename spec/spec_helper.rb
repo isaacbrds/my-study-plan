@@ -3,6 +3,7 @@ require "my_ruby_study_level_2"
 require "foodie/food"
 require "algorithms/bubble_sort"
 require "algorithms/linear_search"
+require 'algorithms/minimum_product'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
