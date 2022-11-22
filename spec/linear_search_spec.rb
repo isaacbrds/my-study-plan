@@ -6,7 +6,7 @@ RSpec.describe Algorithms::LinearSearch do
     let(:choosed_number) {6}
 
     it "Should be found 6" do
-    expect(Algorithms::LinearSearch.find(:arr, :choosed_number)).eql?(:choosed_number)
+      expect(Algorithms::LinearSearch.find(arr, choosed_number)).eql?(choosed_number)
     end
   end
 end
