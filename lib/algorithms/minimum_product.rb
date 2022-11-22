@@ -4,7 +4,7 @@ module Algorithms
     def self.calculate(list)
       negative = 0
       positive = 0
-      minimum = Integer::MAX
+      minimum = (1 << 31) - 1
       zero = 0
       list.each do |element|
         if element.negative?
@@ -17,15 +17,23 @@ module Algorithms
         minimum = element if minimum > element
       end
 
-      if negative == positive && zero == 0
-        new_list = list.reduce do |accumulator, element|
+      if negative == positive && zero.zero?
+        new_list = list.select { |element| element != minimum }
+        minimum_product = new_list.reduce do |accumulator, element|
           accumulator * element
         end
+        minimum_product
       end
 
-      if zero >= 1 and negative == 0
-        0
-      end
+      0 if zero >= 1 && negative.zero?
 
+      if negative != positive && zero.zero?
+        minimum_product = list.reduce do |accumulator, element|
+          accumulator * element
+        end
+        minimum_product
+      end
+    end
   end
 end
+
